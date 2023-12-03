@@ -1,0 +1,599 @@
+/* General */
+/* @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    /* background-color: #fce9ff; */
+    margin: 0;
+    padding: 0;
+  }
+body {
+  /* font-family: 'Gaegu', sans-serif; */
+  background-color: #fce9ff;
+  font-family: 'Mali', cursive;
+}
+html {
+  scroll-behavior: smooth;
+}
+p {
+  color: #a18cdf;
+}
+
+/* Transition */
+a, .btn {
+  transition: all 300ms ease;
+}
+ 
+/* Desktop Nav */
+nav, 
+.nav-links {
+  display: flex;
+}
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 15vh;
+}
+ .nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+ }
+
+ /* Hover Effect */
+ /* a {
+  position: relative;
+  color: #a18cdf;
+  text-decoration: none;
+  text-decoration-color: #fce9ff;
+  padding: 10px;
+ }
+ a:hover {
+  color: #744f7c;
+ }
+a:after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  background-color: #744f7c;
+  transition: width 1s ease-out;
+  transition: 0.3s;
+}
+a:hover:after {
+  width: 100%;
+} */
+a {
+  color: #a18cdf;
+  text-decoration: none;
+  text-decoration-color: #a997df;
+}
+
+a:hover {
+  color: #744f7c;
+  text-decoration: underline;
+  text-underline-offset: 0.8rem;
+  text-decoration-color: #744f7c;
+}
+
+/* Logo */
+.logo {
+  font-size: 2rem;
+  color: #917ECB;
+}
+.logo:hover {
+  cursor: default;
+}
+
+/* Hamburger Menu */
+#hamburger-nav {
+  display: none;
+}
+.hamburger-menu {
+  position: relative;
+  display: flex;
+  color: #fce9ff;
+}
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: #744f7c;
+  transition: all 0.3 ease-in-out;
+}
+
+/* Menu Links */
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fce9ff;
+  border-radius: 0.8rem;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #744f7c;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+.menu-links li {
+  list-style: none;
+}
+.menu-links.open {
+  max-height: 300px;
+}
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+.hamburger-icon span:first-child {
+  transform: none;
+}
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+/* Sections */
+section {
+  padding-top: 4vh;
+  /* height: 96vh; */
+  margin: 0 10rem;
+  box-sizing: border-box;
+  /* min-height: fit-content; */
+  min-height: 96vh;
+}
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+#Profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+  /* mix-blend-mode: darken; */
+}
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+.section__text p {
+  font-weight: 600;
+  color: #a18cdf;
+}
+.section__text__p1 {
+  text-align: center;
+
+  color: #816bc1;
+}
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+.title {
+  font-size: 3rem;
+  text-align: center;
+  color: #744f7c;
+}
+.socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* Icon */
+.social-icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* About Section */
+#About {
+  position: relative;
+}
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+.about-containers, .about-details-container {
+  display: flex;
+}
+.about-pic {
+  border-radius: 2rem;
+}
+.icon-arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: -1rem;
+  height: 2rem;
+}
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: #fce9ff;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 1px #d3c0ef;
+  border: 0.2rem dashed;
+  border-color: #744f7c;
+  text-align: center;
+}
+h3 {
+  color: #744f7c;
+}
+h4 {
+  color: #917ECB;
+}
+.p1 {
+  text-align: center;
+  color: #a997df;
+}
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+.icon {
+  height: 100px;
+}
+.p2 {
+  text-align: center;
+  color: #a18cdf;
+}
+
+/* Digital Arts */
+#Arts {
+  position: relative;
+}
+.art-sub-title {
+  color: #917ECB;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.art-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+.ico-arrow {
+  position: absolute;
+  right: -5rem;
+  /* bottom: -160rem; */
+  height: 2rem;
+}
+
+/* Art Stuff */
+article {
+  display: flex;
+  /* width: 20rem; */
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+.my-digital-arts {
+  border-radius: 10px;
+  box-shadow: 5px 5px 1px #d3c0ef;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  height: 45vh;
+}
+.my-paint-arts {
+  border-radius: 10px;
+  box-shadow: 5px 5px 1px #d3c0ef;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  height: 45vh;
+}
+.my-paint-art {
+  border-radius: 10px;
+  box-shadow: 5px 5px 1px #d3c0ef;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  width: 21rem;
+  gap: 1.5rem;
+  height: 45vh;
+  max-width: 43.3vh;
+}
+.my-arts {
+  border-radius: 10px;
+  box-shadow: 5px 5px 1px #d3c0ef;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  height: 45vh;
+}
+.my-art {
+  border-radius: 10px;
+  box-shadow: 5px 5px 1px #d3c0ef;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  height: 45vh;
+}
+.details-containers {
+  padding: 1.6rem;
+  flex: 1;
+  background: #fce9ff;
+  border-radius: 2rem;
+  box-shadow: 10px 8px 1px #d3c0ef;
+  border: 0.2rem groove;
+  border-color: #744f7c;
+  text-align: center;
+}
+
+/* Sketches */
+#Sketches {
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh; */
+}
+.art-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.my-digital-sketch {
+  border-radius: 10px;
+  box-shadow: 5px 5px 1px #d3c0ef;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  height: 45vh;
+}
+
+/* Social and TY */
+#Socials {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 1vh;
+}
+.social-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: #744f7c 0.1rem solid;
+  border-color: #744f7c;
+  background: #fce9ff;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+.contact-info-container p {
+  font-size: 25px;
+  margin-right: 1.3rem;
+  /* margin: 0.5rem; */
+}
+.social-info-container {
+  cursor: default;
+  height: 3rem;
+}
+
+/* Foot Fetish Section */
+footer {
+  height: 26vh;
+  margin: 0 1rem;
+}
+footer p {
+  text-align: center;
+  height: 10vh;
+}
+
+.thanku-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  height: 100vh;
+}
+
+/* Media Query */
+@media screen and (max-width: 1400px) {
+  #Profile {
+    height: 83vh;
+    margin-bottom: 6rem;
+  }
+  .my-digital-sketch,
+  .my-digital-arts,
+  .my-paint-art,
+  .my-arts,
+  .my-paint-arts {
+    height: 40vh;
+  }
+  .my-art {
+    height: 40vh;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+  #Socials,
+  #Sketches {
+    height: fit-content;
+    flex-direction: column;
+  }
+  .thanku-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+  .my-digital-sketch,
+  .my-digital-arts,
+  .my-paint-art,
+  .my-arts,
+  .my-paint-arts {
+    height: 35vh;
+  }
+  .my-art {
+    height: 28vh;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  #Arts,
+  .art-details-container {
+    margin-top: 2rem;
+  }
+  #Profile,
+  .section-container {
+    display: block;
+  }
+  .ico-arrow, .icon-arrow {
+    display: none;
+  }
+  section,
+  .section-container {
+    height: fit-content;
+  }
+  section {
+    margin: 0 5%;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem;
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  #Socials,
+  footer {
+    height: 40vh;
+  }
+  .my-digital-sketch,
+  .my-digital-arts,
+  .my-paint-art,
+  .my-arts,
+  .my-paint-arts {
+    flex-direction: column;
+    align-items: center;
+  }
+  .my-art {
+    flex-direction: column;
+    align-items: center;
+  }
+  #Profile {
+    height: 83vh;
+    margin-bottom: 0;
+  }
+  article {
+    font-size: 1rem;
+  }
+  footer nav {
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+  .about-containers,
+  .social-info-upper-container,
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  .social-info-container {
+    margin: 0;
+  }
+  .social-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .contact-info-container {
+    margin: 0;
+  }
+  .contact-info-container p,
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .art-sub-title {
+    font-size: 1.25rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .section__pic-container {
+    width: auto;
+    height: 46vw;
+    justify-content: center;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .text-container {
+    text-align: justify;
+  }
+}
